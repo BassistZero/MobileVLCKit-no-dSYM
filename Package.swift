@@ -5,18 +5,20 @@ import PackageDescription
 
 let package = Package(
     name: "MobileVLCKit",
-    platform: [
-        .iOS(13)
-    ]
+    platforms: [
+        .iOS(.v13)
+    ],
     products: [
         .library(
             name: "MobileVLCKit",
-            targets: ["MobileVLCKit"]),
+            targets: ["MobileVLCKit"]
+        )
     ],
     targets: [
         .binaryTarget(
             name: "MobileVLCKit",
-            path: "Sources/MobileVLCKit.xcframework"
+            url: "https://github.com/BassistZero/MobileVLCKit/releases/download/3.6.0/MobileVLCKit.zip",
+            checksum: "378e36f417d1461c99a61ff58cd766de7ad5fc8e8d620ef340358e0266628fa1"
         )
     ]
 )
